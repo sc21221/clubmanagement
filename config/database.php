@@ -1,9 +1,12 @@
 <?php
 class Database {
     private $host = "mysql";
+    #private $host = "192.168.178.2";
     private $db_name = "club_management";
     private $username = "club";
+    #private $username = "rs";
     private $password = "club";
+    #private $password = "Li@150303iKg";
     public $conn;
 
     public function getConnection() {

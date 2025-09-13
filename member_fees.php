@@ -127,40 +127,7 @@ if(isset($_GET['member_search']) && !empty($_GET['member_search'])) {
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="index.php">
-                <i class="fas fa-users me-2"></i>Vereinsverwaltung
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">
-                            <i class="fas fa-list me-1"></i>Mitglieder
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="fee_classes.php">
-                            <i class="fas fa-tags me-1"></i>Beitragsklassen
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="member_fees.php">
-                            <i class="fas fa-link me-1"></i>Zuordnungen
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="events.php">
-                            <i class="fas fa-calendar me-1"></i>Veranstaltungen
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php require_once 'partials/menu.php'; echo $htmlMenu; ?>
 
     <div class="container mt-4">
         <!-- Nachrichten anzeigen -->
@@ -174,7 +141,7 @@ if(isset($_GET['member_search']) && !empty($_GET['member_search'])) {
         <!-- Header mit Aktionen -->
         <div class="row mb-4">
             <div class="col-md-6">
-                <h1><i class="fas fa-link me-2"></i>Mitglieder-Beitragsklassen</h1>
+                <h1><i class="fas fa-link me-2"></i>Zuordnungen Mitglieder-Beitragsklassen</h1>
             </div>
             <div class="col-md-6 text-end">
                 <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addAssignmentModal">

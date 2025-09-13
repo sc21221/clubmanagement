@@ -57,6 +57,12 @@ class FeeClass {
 
     // Neue Beitragsklasse erstellen
     public function create() {
+        // Validierung der ENUM-Werte
+        $valid_billing_cycles = ['Jährlich', 'Halbjährlich', 'Vierteljährlich', 'Monatlich'];
+        if (!in_array($this->billing_cycle, $valid_billing_cycles)) {
+            throw new Exception("Ungültiger Abrechnungszyklus: " . $this->billing_cycle);
+        }
+        
         $query = "INSERT INTO " . $this->table_name . " 
                   (name, description, base_amount, currency, billing_cycle, is_active) 
                   VALUES (?, ?, ?, ?, ?, ?)";
@@ -66,6 +72,7 @@ class FeeClass {
         // Daten bereinigen
         $this->name = htmlspecialchars(strip_tags($this->name));
         $this->description = htmlspecialchars(strip_tags($this->description));
+        $this->billing_cycle = trim($this->billing_cycle);
         
         // Parameter binden
         $stmt->bindParam(1, $this->name);
@@ -83,6 +90,12 @@ class FeeClass {
 
     // Beitragsklasse aktualisieren
     public function update() {
+        // Validierung der ENUM-Werte
+        $valid_billing_cycles = ['Jährlich', 'Halbjährlich', 'Vierteljährlich', 'Monatlich'];
+        if (!in_array($this->billing_cycle, $valid_billing_cycles)) {
+            throw new Exception("Ungültiger Abrechnungszyklus: " . $this->billing_cycle);
+        }
+        
         $query = "UPDATE " . $this->table_name . " 
                   SET name = ?, description = ?, base_amount = ?, 
                       currency = ?, billing_cycle = ?, is_active = ? 
@@ -93,6 +106,7 @@ class FeeClass {
         // Daten bereinigen
         $this->name = htmlspecialchars(strip_tags($this->name));
         $this->description = htmlspecialchars(strip_tags($this->description));
+        $this->billing_cycle = trim($this->billing_cycle);
         
         // Parameter binden
         $stmt->bindParam(1, $this->name);

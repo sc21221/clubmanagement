@@ -21,35 +21,59 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(isset($_POST['action'])) {
         switch($_POST['action']) {
             case 'create':
-                $fee_class->name = $_POST['name'];
-                $fee_class->description = $_POST['description'];
-                $fee_class->base_amount = $_POST['base_amount'];
-                $fee_class->currency = $_POST['currency'];
-                $fee_class->billing_cycle = $_POST['billing_cycle'];
+                $fee_class->name = trim($_POST['name']);
+                $fee_class->description = trim($_POST['description']);
+                $fee_class->base_amount = floatval($_POST['base_amount']);
+                $fee_class->currency = trim($_POST['currency']);
+                $fee_class->billing_cycle = trim($_POST['billing_cycle']);
                 $fee_class->is_active = isset($_POST['is_active']) ? 1 : 0;
                 
-                if($fee_class->create()) {
-                    $_SESSION['message'] = "Beitragsklasse erfolgreich erstellt!";
-                } else {
-                    $_SESSION['message'] = "Fehler beim Erstellen der Beitragsklasse.";
+                // Validierung der ENUM-Werte
+                $valid_billing_cycles = ['Jährlich', 'Halbjährlich', 'Vierteljährlich', 'Monatlich'];
+                if (!in_array($fee_class->billing_cycle, $valid_billing_cycles)) {
+                    $_SESSION['message'] = "Ungültiger Abrechnungszyklus: " . htmlspecialchars($fee_class->billing_cycle);
+                    header("Location: fee_classes.php");
+                    exit();
+                }
+                
+                try {
+                    if($fee_class->create()) {
+                        $_SESSION['message'] = "Beitragsklasse erfolgreich erstellt!";
+                    } else {
+                        $_SESSION['message'] = "Fehler beim Erstellen der Beitragsklasse.";
+                    }
+                } catch (Exception $e) {
+                    $_SESSION['message'] = "Fehler: " . $e->getMessage();
                 }
                 header("Location: fee_classes.php");
                 exit();
                 break;
                 
             case 'update':
-                $fee_class->id = $_POST['id'];
-                $fee_class->name = $_POST['name'];
-                $fee_class->description = $_POST['description'];
-                $fee_class->base_amount = $_POST['base_amount'];
-                $fee_class->currency = $_POST['currency'];
-                $fee_class->billing_cycle = $_POST['billing_cycle'];
+                $fee_class->id = intval($_POST['id']);
+                $fee_class->name = trim($_POST['name']);
+                $fee_class->description = trim($_POST['description']);
+                $fee_class->base_amount = floatval($_POST['base_amount']);
+                $fee_class->currency = trim($_POST['currency']);
+                $fee_class->billing_cycle = trim($_POST['billing_cycle']);
                 $fee_class->is_active = isset($_POST['is_active']) ? 1 : 0;
                 
-                if($fee_class->update()) {
-                    $_SESSION['message'] = "Beitragsklasse erfolgreich aktualisiert!";
-                } else {
-                    $_SESSION['message'] = "Fehler beim Aktualisieren der Beitragsklasse.";
+                // Validierung der ENUM-Werte
+                $valid_billing_cycles = ['Jährlich', 'Halbjährlich', 'Vierteljährlich', 'Monatlich'];
+                if (!in_array($fee_class->billing_cycle, $valid_billing_cycles)) {
+                    $_SESSION['message'] = "Ungültiger Abrechnungszyklus: " . htmlspecialchars($fee_class->billing_cycle);
+                    header("Location: fee_classes.php");
+                    exit();
+                }
+                
+                try {
+                    if($fee_class->update()) {
+                        $_SESSION['message'] = "Beitragsklasse erfolgreich aktualisiert!";
+                    } else {
+                        $_SESSION['message'] = "Fehler beim Aktualisieren der Beitragsklasse.";
+                    }
+                } catch (Exception $e) {
+                    $_SESSION['message'] = "Fehler: " . $e->getMessage();
                 }
                 header("Location: fee_classes.php");
                 exit();
@@ -117,40 +141,7 @@ if(isset($_GET['search']) && !empty($_GET['search'])) {
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="index.php">
-                <i class="fas fa-users me-2"></i>Vereinsverwaltung
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">
-                            <i class="fas fa-list me-1"></i>Mitglieder
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="fee_classes.php">
-                            <i class="fas fa-tags me-1"></i>Beitragsklassen
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="member_fees.php">
-                            <i class="fas fa-link me-1"></i>Zuordnungen
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="events.php">
-                            <i class="fas fa-calendar me-1"></i>Veranstaltungen
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php require_once 'partials/menu.php'; echo $htmlMenu; ?>
 
     <div class="container mt-4">
         <!-- Nachrichten anzeigen -->
@@ -164,7 +155,7 @@ if(isset($_GET['search']) && !empty($_GET['search'])) {
         <!-- Header mit Aktionen -->
         <div class="row mb-4">
             <div class="col-md-6">
-                <h1><i class="fas fa-tags me-2"></i>Beitragsklassenverwaltung</h1>
+                <h1><i class="fas fa-tags me-2"></i>Beitragsklassen</h1>
             </div>
             <div class="col-md-6 text-end">
                 <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addFeeClassModal">

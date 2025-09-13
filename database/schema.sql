@@ -2,19 +2,56 @@
 CREATE DATABASE IF NOT EXISTS club_management CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE club_management;
 
+CREATE TABLE clubs (
+  Id int auto_increment primary key,
+  name varchar(100) NOT NULL,
+  name2 varchar(100) DEFAULT NULL,
+  boss varchar(40) DEFAULT NULL,
+  street varchar(60) DEFAULT NULL,
+  zip varchar(20) DEFAULT NULL,
+  city varchar(60) DEFAULT NULL,
+  country varchar(20) DEFAULT NULL,
+  email varchar(80) DEFAULT NULL,
+  phone varchar(20) DEFAULT NULL,
+  bank_name varchar(30) DEFAULT NULL,
+  bank_creditor_id varchar(32) NOT NULL,
+  bank_bic varchar(32) NOT NULL,
+  bank_iban varchar(32) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_by varchar(80) DEFAULT NULL,
+  updated_at timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+);
+
+INSERT INTO `clubs` (`name`, `boss`, `street`, `zip`, `city`, `country`, `email`, `phone`, `bank_name`, `bank_Creditor_ID`, `bank_BIC`, `bank_IBAN`,created_at) VALUES
+('Musikverein Denkendorf', 'Michael Rill', 'Schmiedstr. 1', '85095', 'Gelbelsee', 'D', 'michael.rill@musikverein-denkendorf.de', '08465 3176', 'Raiffeisenbank Bayern Mitte', 'DE90ZZZ00001055067', 'GENODEF1INP', 'DE65721608180007114818', '2014-04-11 17:31:08');
+
+
 -- Mitglieder-Tabelle
 CREATE TABLE IF NOT EXISTS members (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    club_id INT NOT NULL Default 1,
+    salutation ENUM('Herr', 'Frau', 'Divers') DEFAULT 'Herr',
+    sex ENUM('Männlich', 'Weiblich', 'Divers') DEFAULT 'Männlich',
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
-    email VARCHAR(255) UNIQUE NOT NULL,
+    email VARCHAR(255),
     phone VARCHAR(50),
-    join_date DATE NOT NULL,
     membership_type ENUM('Vollmitglied', 'Fördermitglied', 'Jugendmitglied', 'Ehrenmitglied') DEFAULT 'Vollmitglied',
     status ENUM('Aktiv', 'Inaktiv', 'Gesperrt') DEFAULT 'Aktiv',
-    address TEXT,
-    birth_date DATE,
+    invoice_marker boolean DEFAULT FALSE,
+    street VARCHAR(255),
+    zip VARCHAR(255),
+    city VARCHAR(255),
+    country VARCHAR(255),
+    join_date DATE NOT NULL,
+    leave_date DATE,
+    birth_date DATE NOT NULL,
+    bank_name VARCHAR(255),
+    bank_bic VARCHAR(255),
+    bank_iban VARCHAR(255),
+    bank_holder VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_by varchar(80) DEFAULT NULL,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
@@ -84,10 +121,11 @@ CREATE TABLE IF NOT EXISTS event_participants (
 );
 
 -- Beispieldaten einfügen
-INSERT INTO members (first_name, last_name, email, phone, join_date, membership_type, status, address) VALUES
-('Max', 'Mustermann', 'max.mustermann@example.com', '+49 123 456789', '2023-01-15', 'Vollmitglied', 'Aktiv', 'Musterstraße 123, 12345 Musterstadt'),
-('Anna', 'Schmidt', 'anna.schmidt@example.com', '+49 987 654321', '2023-03-20', 'Fördermitglied', 'Aktiv', 'Beispielweg 456, 54321 Beispielstadt'),
-('Peter', 'Müller', 'peter.mueller@example.com', '+49 555 123456', '2023-06-10', 'Jugendmitglied', 'Aktiv', 'Jugendstraße 789, 67890 Jugendstadt');
+INSERT INTO members (first_name, last_name, email, phone,birth_date, join_date, membership_type, status, street, zip, city, country,bank_name,bank_bic,bank_iban,bank_holder) VALUES
+('Max', 'Mustermann', 'max.mustermann@example.com', '+49 123 456789', '1999-01-15','2023-01-15', 'Vollmitglied', 'Aktiv', 'Musterstraße 123', '12345', 'Musterstadt', 'D', 'Bank1', 'BIC1', 'IBAN1', 'Holder1'),
+('Anna', 'Schmidt', 'anna.schmidt@example.com', '+49 987 654321', '1999-03-20', '2023-03-20', 'Fördermitglied', 'Aktiv', 'Beispielweg 456', '54321', 'Beispielstadt', 'D', 'Bank2', 'BIC2', 'IBAN2', 'Holder2'),
+('Peter', 'Müller', 'peter.mueller@example.com', '+49 555 123456', '2009-06-10', '2023-06-10', 'Jugendmitglied', 'Aktiv', 'Jugendstraße 789', '67890', 'Jugendstadt', 'D', 'Bank3', 'BIC3', 'IBAN3', 'Holder3')
+;
 
 -- Beispieldaten für Beitragsklassen
 INSERT INTO fee_classes (name, description, base_amount, billing_cycle) VALUES

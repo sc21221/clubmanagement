@@ -1,0 +1,302 @@
+[2025-09-06 09:22:04] INFO: Database operation: UPDATE on members {"operation":"UPDATE","table":"members","data":{"member_id":"4","first_name":"hänschen","last_name":"dampf","email":"reinhard.schiessl@web.de","membership_type":"Vollmitglied"},"result":"SUCCESS","sql_time":0.012311935424804688} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:22:04] INFO: User action: Member updated {"action":"Member updated","url":"\/index.php","method":"POST","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","member_id":"4","member_name":"hänschen dampf","email":"reinhard.schiessl@web.de","execution_time":0.00746607780456543} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:24:49] INFO: Database operation: UPDATE on members {"operation":"UPDATE","table":"members","data":{"member_id":"4","first_name":"hänschen","last_name":"dampf","email":"reinhard.schiessl@web.de","membership_type":"Vollmitglied"},"result":"SUCCESS","sql_time":0.05216097831726074} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:24:49] INFO: User action: Member updated {"action":"Member updated","url":"\/index.php","method":"POST","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","member_id":"4","member_name":"hänschen dampf","email":"reinhard.schiessl@web.de","execution_time":0.05023193359375} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:25:12] INFO: Database operation: UPDATE on members {"operation":"UPDATE","table":"members","data":{"member_id":"3","first_name":"Peter","last_name":"Müller","email":"peter.mueller@example.com","membership_type":"Jugendmitglied"},"result":"SUCCESS","sql_time":0.01034092903137207} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:25:12] INFO: User action: Member updated {"action":"Member updated","url":"\/index.php","method":"POST","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","member_id":"3","member_name":"Peter Müller","email":"peter.mueller@example.com","execution_time":0.006983041763305664} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:25:20] INFO: Database operation: UPDATE on members {"operation":"UPDATE","table":"members","data":{"member_id":"3","first_name":"Peter","last_name":"Müller","email":"peter.mueller@example.com","membership_type":"Jugendmitglied"},"result":"SUCCESS","sql_time":0.002936840057373047} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:25:20] INFO: User action: Member updated {"action":"Member updated","url":"\/index.php","method":"POST","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","member_id":"3","member_name":"Peter Müller","email":"peter.mueller@example.com","execution_time":0.0007929801940917969} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:30] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:35] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:54:48] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 09:55:21] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:29] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:31] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:32] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:33] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:33] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:33] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:33] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:33] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:33] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:33] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:33] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:33] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:33] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:33] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:33] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:33] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:33] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:33] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:46] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:47] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:43:52] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-06 15:44:08] CRITICAL: Database connection failed | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 13:50:22] INFO: Database operation: UPDATE on members {"operation":"UPDATE","table":"members","data":{"member_id":"3","first_name":"Peter","last_name":"Müller","email":"peter.mueller@example.com","membership_type":"Jugendmitglied"},"result":"SUCCESS","sql_time":0.009821891784667969} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 13:50:22] INFO: User action: Member updated {"action":"Member updated","url":"\/index.php","method":"POST","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","member_id":"3","member_name":"Peter Müller","email":"peter.mueller@example.com","execution_time":0.006746053695678711} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 13:50:32] INFO: Database operation: UPDATE on members {"operation":"UPDATE","table":"members","data":{"member_id":"3","first_name":"Peter","last_name":"Müller","email":"peter.mueller@example.com","membership_type":"Jugendmitglied"},"result":"SUCCESS","sql_time":0.0077478885650634766} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 13:50:32] INFO: User action: Member updated {"action":"Member updated","url":"\/index.php","method":"POST","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","member_id":"3","member_name":"Peter Müller","email":"peter.mueller@example.com","execution_time":0.005171060562133789} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 13:56:40] INFO: Database operation: CREATE on members {"operation":"CREATE","table":"members","data":{"first_name":"Hans","last_name":"Dampf","email":"hans@dampf.de","membership_type":"Vollmitglied"},"result":"SUCCESS","sql_time":0.06444311141967773} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 13:56:40] INFO: User action: Member created {"action":"Member created","url":"\/index.php","method":"POST","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","member_name":"Hans Dampf","email":"hans@dampf.de","execution_time":0.06189298629760742} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 13:59:06] INFO: Database operation: UPDATE on members {"operation":"UPDATE","table":"members","data":{"member_id":"4","first_name":"Hans","last_name":"Dampf","email":"hans@dampf.de","membership_type":"Vollmitglied"},"result":"SUCCESS","sql_time":0.007997989654541016} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 13:59:06] INFO: User action: Member updated {"action":"Member updated","url":"\/index.php","method":"POST","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","member_id":"4","member_name":"Hans Dampf","email":"hans@dampf.de","execution_time":0.005620002746582031} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 13:59:36] INFO: User action: Member search performed {"action":"Member search performed","url":"\/index.php?search=anna","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","search_term":"anna","ip":"172.19.0.1"} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 13:59:39] INFO: User action: Member search performed {"action":"Member search performed","url":"\/index.php?search=schmit","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","search_term":"schmit","ip":"172.19.0.1"} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 13:59:41] INFO: User action: Member search performed {"action":"Member search performed","url":"\/index.php?search=schmi","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","search_term":"schmi","ip":"172.19.0.1"} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 14:22:54] INFO: User action: Birthday list generated {"action":"Birthday list generated","url":"\/birthday_list.php","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"2025","members_found":0} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 14:27:55] INFO: User action: Birthday list generated {"action":"Birthday list generated","url":"\/birthday_list.php","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"2025","members_found":0} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 14:31:52] INFO: User action: Birthday list generated {"action":"Birthday list generated","url":"\/birthday_list.php","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"2025","members_found":6} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 14:36:52] INFO: User action: Birthday list generated {"action":"Birthday list generated","url":"\/birthday_list.php","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"2025","members_found":6} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 14:40:32] INFO: User action: Birthday list generated {"action":"Birthday list generated","url":"\/birthday_list.php","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"2025","members_found":6} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 14:47:04] INFO: User action: Member search performed {"action":"Member search performed","url":"\/index.php?search=fuchs","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","search_term":"fuchs","ip":"172.19.0.1"} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 15:07:41] INFO: User action: Anniversary list generated {"action":"Anniversary list generated","url":"\/anniversary_list.php","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"2025","members_found":8} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 15:23:55] INFO: User action: Birthday list generated {"action":"Birthday list generated","url":"\/birthday_list.php","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"2025","members_found":6} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 15:24:06] INFO: User action: Birthday list generated {"action":"Birthday list generated","url":"\/birthday_list.php","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"2025","members_found":6} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 15:24:49] INFO: User action: Birthday list generated {"action":"Birthday list generated","url":"\/birthday_list.php","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"2025","members_found":6} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 15:25:38] INFO: User action: Birthday list generated {"action":"Birthday list generated","url":"\/birthday_list.php","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"2025","members_found":6} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 15:25:42] INFO: User action: Birthday list generated {"action":"Birthday list generated","url":"\/birthday_list.php","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"2025","members_found":6} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 15:25:52] INFO: User action: Birthday list generated {"action":"Birthday list generated","url":"\/birthday_list.php","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"2025","members_found":6} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 15:29:14] INFO: User action: Birthday list generated {"action":"Birthday list generated","url":"\/birthday_list.php?year=%3C?php%20echo%20date(%27Y%27);%20?%3E","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"<?php echo date('Y'); ?>","members_found":0} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 15:30:45] INFO: User action: Birthday list generated {"action":"Birthday list generated","url":"\/birthday_list.php?year=%3C?php%20echo%20date(%27Y%27);%20?%3E","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"<?php echo date('Y'); ?>","members_found":0} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 15:30:50] INFO: User action: Birthday list generated {"action":"Birthday list generated","url":"\/birthday_list.php?year=2025","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"2025","members_found":6} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 15:30:55] INFO: User action: Anniversary list generated {"action":"Anniversary list generated","url":"\/anniversary_list.php?year=2025","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"2025","members_found":8} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 15:30:59] INFO: User action: Anniversary list generated {"action":"Anniversary list generated","url":"\/anniversary_list.php?year=2026","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"2026","members_found":22} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 15:37:13] INFO: User action: Member search performed {"action":"Member search performed","url":"\/index.php?search=schiessl","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","search_term":"schiessl","ip":"172.19.0.1"} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 15:37:25] INFO: User action: Birthday list generated {"action":"Birthday list generated","url":"\/birthday_list.php?year=2025","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"2025","members_found":6} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 15:37:32] INFO: User action: Anniversary list generated {"action":"Anniversary list generated","url":"\/anniversary_list.php?year=2025","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"2025","members_found":8} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB
+[2025-09-13 15:37:37] INFO: User action: Anniversary list generated {"action":"Anniversary list generated","url":"\/anniversary_list.php?year=2026","method":"GET","user_agent":"Mozilla\/5.0 (X11; Linux x86_64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/139.0.0.0 Safari\/537.36","current_year":"2026","members_found":22} | User: Anonymous | IP: 172.19.0.1 | Memory: 2 MB

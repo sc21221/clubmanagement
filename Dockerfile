@@ -26,6 +26,9 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     xml \
     xsl
 
+RUN pecl install xdebug \
+    && docker-php-ext-enable xdebug
+
 # Set working directory
 WORKDIR /app
 

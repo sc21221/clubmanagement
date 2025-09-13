@@ -65,15 +65,26 @@ if($action == 'get_member' && isset($_GET['id'])) {
             'success' => true,
             'member' => [
                 'id' => $member->id,
+                'salutation' => $member->salutation,
+                'sex' => $member->sex,
                 'first_name' => $member->first_name,
                 'last_name' => $member->last_name,
                 'email' => $member->email,
                 'phone' => $member->phone,
                 'join_date' => $member->join_date,
+                'leave_date' => $member->leave_date,
                 'birth_date' => $member->birth_date,
                 'membership_type' => $member->membership_type,
                 'status' => $member->status,
-                'address' => $member->address
+                'invoice_marker' => $member->invoice_marker,
+                'street' => $member->street,
+                'zip' => $member->zip,
+                'city' => $member->city,
+                'country' => $member->country,
+                'bank_name' => $member->bank_name,
+                'bank_bic' => $member->bank_bic,
+                'bank_iban' => $member->bank_iban,
+                'bank_holder' => $member->bank_holder,
             ]
         ]);
     } else {
@@ -90,86 +101,70 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(isset($_POST['action'])) {
         switch($_POST['action']) {
             case 'create':
+                $member->salutation = $_POST['salutation'];
+                $member->sex = $_POST['sex'];
                 $member->first_name = $_POST['first_name'];
                 $member->last_name = $_POST['last_name'];
                 $member->email = $_POST['email'];
                 $member->phone = $_POST['phone'];
                 $member->join_date = $_POST['join_date'];
+                $member->leave_date = $_POST['leave_date'];
+                $member->birth_date = $_POST['birth_date'];
                 $member->membership_type = $_POST['membership_type'];
                 $member->status = $_POST['status'];
-                $member->address = $_POST['address'];
-                $member->birth_date = $_POST['birth_date'];
+                $member->invoice_marker = $_POST['invoice_marker'];
+                $member->street = $_POST['street'];
+                $member->zip = $_POST['zip'];
+                $member->city = $_POST['city'];
+                $member->country = $_POST['country'];
+                $member->bank_name = $_POST['bank_name'];
+                $member->bank_bic = $_POST['bank_bic'];
+                $member->bank_iban = $_POST['bank_iban'];
+                $member->bank_holder = $_POST['bank_holder'];
+                
                 
                 if($member->create()) {
                     $_SESSION['message'] = "Mitglied erfolgreich erstellt!";
                     header("Location: index.php");
                     exit();
                 } else {
-                    // Prüfen, ob es ein E-Mail-Konflikt ist
-                    if($member->emailExists($member->email)) {
-                        // E-Mail-Konflikt: Daten in Session speichern und Modal öffnen
-                        $_SESSION['create_error'] = "Fehler: Die E-Mail-Adresse '{$member->email}' ist bereits vergeben.";
-                        $_SESSION['create_data'] = [
-                            'first_name' => $member->first_name,
-                            'last_name' => $member->last_name,
-                            'email' => $member->email,
-                            'phone' => $member->phone,
-                            'join_date' => $member->join_date,
-                            'birth_date' => $member->birth_date,
-                            'membership_type' => $member->membership_type,
-                            'status' => $member->status,
-                            'address' => $member->address
-                        ];
-                        header("Location: index.php?action=create_error");
-                        exit();
-                    } else {
-                        $_SESSION['message'] = "Fehler beim Erstellen des Mitglieds.";
-                        header("Location: index.php");
-                        exit();
-                    }
+                    $_SESSION['message'] = "Fehler beim Erstellen des Mitglieds.";
+                    header("Location: index.php");
+                    exit();
                 }
                 break;
                 
             case 'update':
                 $member->id = $_POST['id'];
+                $member->salutation = $_POST['salutation'];
+                $member->sex = $_POST['sex'];
                 $member->first_name = $_POST['first_name'];
                 $member->last_name = $_POST['last_name'];
                 $member->email = $_POST['email'];
                 $member->phone = $_POST['phone'];
                 $member->join_date = $_POST['join_date'];
+                $member->leave_date = $_POST['leave_date'];
+                $member->birth_date = $_POST['birth_date'];
                 $member->membership_type = $_POST['membership_type'];
                 $member->status = $_POST['status'];
-                $member->address = $_POST['address'];
-                $member->birth_date = $_POST['birth_date'];
+                $member->invoice_marker = $_POST['invoice_marker'];
+                $member->street = $_POST['street'];
+                $member->zip = $_POST['zip'];
+                $member->city = $_POST['city'];
+                $member->country = $_POST['country'];
+                $member->bank_name = $_POST['bank_name'];
+                $member->bank_bic = $_POST['bank_bic'];
+                $member->bank_iban = $_POST['bank_iban'];
+                $member->bank_holder = $_POST['bank_holder'];
                 
                 if($member->update()) {
                     $_SESSION['message'] = "Mitglied erfolgreich aktualisiert!";
                     header("Location: index.php");
                     exit();
                 } else {
-                    // Prüfen, ob es ein E-Mail-Konflikt ist
-                    if($member->emailExists($member->email, $member->id)) {
-                        // E-Mail-Konflikt: Daten in Session speichern und Modal öffnen
-                        $_SESSION['edit_error'] = "Fehler: Die E-Mail-Adresse '{$member->email}' ist bereits vergeben.";
-                        $_SESSION['edit_data'] = [
-                            'id' => $member->id,
-                            'first_name' => $member->first_name,
-                            'last_name' => $member->last_name,
-                            'email' => $member->email,
-                            'phone' => $member->phone,
-                            'join_date' => $member->join_date,
-                            'birth_date' => $member->birth_date,
-                            'membership_type' => $member->membership_type,
-                            'status' => $member->status,
-                            'address' => $member->address
-                        ];
-                        header("Location: index.php?action=edit&id=" . $member->id);
-                        exit();
-                    } else {
-                        $_SESSION['message'] = "Fehler beim Aktualisieren des Mitglieds.";
-                        header("Location: index.php");
-                        exit();
-                    }
+                    $_SESSION['message'] = "Fehler beim Aktualisieren des Mitglieds.";
+                    header("Location: index.php");
+                    exit();
                 }
                 break;
                 
@@ -231,44 +226,17 @@ if(isset($_GET['search']) && !empty($_GET['search'])) {
         .status-badge {
             font-size: 0.8rem;
         }
+        .modal-dialog {
+            transition: transform 0.1s ease;
+        }
+        .modal-header {
+            user-select: none;
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="index.php">
-                <i class="fas fa-users me-2"></i>Vereinsverwaltung
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">
-                            <i class="fas fa-list me-1"></i>Mitglieder
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="fee_classes.php">
-                            <i class="fas fa-tags me-1"></i>Beitragsklassen
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="member_fees.php">
-                            <i class="fas fa-link me-1"></i>Zuordnungen
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="events.php">
-                            <i class="fas fa-calendar me-1"></i>Veranstaltungen
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php require_once 'partials/menu.php'; echo $htmlMenu; ?>
 
     <div class="container mt-4">
         <!-- Nachrichten anzeigen -->
@@ -282,7 +250,7 @@ if(isset($_GET['search']) && !empty($_GET['search'])) {
         <!-- Header mit Aktionen -->
         <div class="row mb-4">
             <div class="col-md-6">
-                <h1><i class="fas fa-users me-2"></i>Mitgliederverwaltung</h1>
+                <h1><i class="fas fa-users me-2"></i>Mitglieder</h1>
             </div>
             <div class="col-md-6 text-end">
                 <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addMemberModal">
@@ -334,8 +302,8 @@ if(isset($_GET['search']) && !empty($_GET['search'])) {
                         <thead>
                             <tr>
                                 <th>Name</th>
-                                <th>E-Mail</th>
                                 <th>Telefon</th>
+                                <th>Geburtsdatum</th>
                                 <th>Beitrittsdatum</th>
                                 <th>Typ</th>
                                 <th>Status</th>
@@ -349,10 +317,10 @@ if(isset($_GET['search']) && !empty($_GET['search'])) {
                             ?>
                             <tr>
                                 <td>
-                                    <strong><?php echo htmlspecialchars($row['first_name'] . ' ' . $row['last_name']); ?></strong>
+                                    <strong><?php echo htmlspecialchars($row['last_name'] . ', ' . $row['first_name']); ?></strong>
                                 </td>
-                                <td><?php echo htmlspecialchars($row['email']); ?></td>
                                 <td><?php echo htmlspecialchars($row['phone']); ?></td>
+                                <td><?php echo date('d.m.Y', strtotime($row['birth_date'])); ?></td>
                                 <td><?php echo date('d.m.Y', strtotime($row['join_date'])); ?></td>
                                 <td>
                                     <span class="badge bg-info"><?php echo htmlspecialchars($row['membership_type']); ?></span>
@@ -386,155 +354,12 @@ if(isset($_GET['search']) && !empty($_GET['search'])) {
     </div>
 
     <!-- Modal: Neues Mitglied hinzufügen -->
-    <div class="modal fade" id="addMemberModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Neues Mitglied hinzufügen</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <form method="POST">
-                    <input type="hidden" name="action" value="create">
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="first_name" class="form-label">Vorname *</label>
-                                <input type="text" class="form-control" id="first_name" name="first_name" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="last_name" class="form-label">Nachname *</label>
-                                <input type="text" class="form-control" id="last_name" name="last_name" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="email" class="form-label">E-Mail *</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="phone" class="form-label">Telefon</label>
-                                <input type="tel" class="form-control" id="phone" name="phone">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="join_date" class="form-label">Beitrittsdatum *</label>
-                                <input type="date" class="form-control" id="join_date" name="join_date" 
-                                       value="<?php echo date('Y-m-d'); ?>" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="birth_date" class="form-label">Geburtsdatum</label>
-                                <input type="date" class="form-control" id="birth_date" name="birth_date">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="membership_type" class="form-label">Mitgliedstyp</label>
-                                <select class="form-select" id="membership_type" name="membership_type">
-                                    <option value="Vollmitglied">Vollmitglied</option>
-                                    <option value="Fördermitglied">Fördermitglied</option>
-                                    <option value="Jugendmitglied">Jugendmitglied</option>
-                                    <option value="Ehrenmitglied">Ehrenmitglied</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="status" class="form-label">Status</label>
-                                <select class="form-select" id="status" name="status">
-                                    <option value="Aktiv">Aktiv</option>
-                                    <option value="Inaktiv">Inaktiv</option>
-                                    <option value="Gesperrt">Gesperrt</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="address" class="form-label">Adresse</label>
-                            <textarea class="form-control" id="address" name="address" rows="3"></textarea>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abbrechen</button>
-                        <button type="submit" class="btn btn-success">Mitglied hinzufügen</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+    <?php include 'partials/member_modal.php'; ?>
+    <?php echo getMemberModalHtml('add'); ?>    
 
     <!-- Modal: Mitglied bearbeiten -->
-    <div class="modal fade" id="editMemberModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Mitglied bearbeiten</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <form method="POST">
-                    <input type="hidden" name="action" value="update">
-                    <input type="hidden" name="id" id="edit_id">
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="edit_first_name" class="form-label">Vorname *</label>
-                                <input type="text" class="form-control" id="edit_first_name" name="first_name" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="edit_last_name" class="form-label">Nachname *</label>
-                                <input type="text" class="form-control" id="edit_last_name" name="last_name" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="edit_email" class="form-label">E-Mail *</label>
-                                <input type="email" class="form-control" id="edit_email" name="email" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="edit_phone" class="form-label">Telefon</label>
-                                <input type="tel" class="form-control" id="edit_phone" name="phone">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="edit_join_date" class="form-label">Beitrittsdatum *</label>
-                                <input type="date" class="form-control" id="edit_join_date" name="join_date" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="edit_birth_date" class="form-label">Geburtsdatum</label>
-                                <input type="date" class="form-control" id="edit_birth_date" name="birth_date">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="edit_membership_type" class="form-label">Mitgliedstyp</label>
-                                <select class="form-select" id="edit_membership_type" name="membership_type">
-                                    <option value="Vollmitglied">Vollmitglied</option>
-                                    <option value="Fördermitglied">Fördermitglied</option>
-                                    <option value="Jugendmitglied">Jugendmitglied</option>
-                                    <option value="Ehrenmitglied">Ehrenmitglied</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="edit_status" class="form-label">Status</label>
-                                <select class="form-select" id="edit_status" name="status">
-                                    <option value="Aktiv">Aktiv</option>
-                                    <option value="Inaktiv">Inaktiv</option>
-                                    <option value="Gesperrt">Gesperrt</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="edit_address" class="form-label">Adresse</label>
-                            <textarea class="form-control" id="edit_address" name="address" rows="3"></textarea>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abbrechen</button>
-                        <button type="submit" class="btn btn-primary">Änderungen speichern</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
+    <?php echo getMemberModalHtml('edit'); ?>    
+                                    
     <!-- Löschbestätigung Modal -->
     <div class="modal fade" id="deleteConfirmModal" tabindex="-1">
         <div class="modal-dialog">
@@ -563,6 +388,55 @@ if(isset($_GET['search']) && !empty($_GET['search'])) {
     <script>
         // Automatisch Modals öffnen wenn Fehler vorliegt
         document.addEventListener('DOMContentLoaded', function() {
+            // Modal verschiebbar machen
+            function makeModalDraggable(modalId, headerId) {
+                const modal = document.getElementById(modalId);
+                const header = document.getElementById(headerId);
+                let isDragging = false;
+                let currentX;
+                let currentY;
+                let initialX;
+                let initialY;
+                let xOffset = 0;
+                let yOffset = 0;
+
+                header.addEventListener('mousedown', dragStart);
+                document.addEventListener('mousemove', drag);
+                document.addEventListener('mouseup', dragEnd);
+
+                function dragStart(e) {
+                    initialX = e.clientX - xOffset;
+                    initialY = e.clientY - yOffset;
+
+                    if (e.target === header || header.contains(e.target)) {
+                        isDragging = true;
+                    }
+                }
+
+                function drag(e) {
+                    if (isDragging) {
+                        e.preventDefault();
+                        currentX = e.clientX - initialX;
+                        currentY = e.clientY - initialY;
+
+                        xOffset = currentX;
+                        yOffset = currentY;
+
+                        modal.querySelector('.modal-dialog').style.transform = `translate(${currentX}px, ${currentY}px)`;
+                    }
+                }
+
+                function dragEnd(e) {
+                    initialX = currentX;
+                    initialY = currentY;
+                    isDragging = false;
+                }
+            }
+
+            // Modals verschiebbar machen
+            makeModalDraggable('addMemberModal', 'addMemberModalHeader');
+            makeModalDraggable('editMemberModal', 'editMemberModalHeader');
+
             <?php if($editError && $editData): ?>
                 // Bearbeitungsfehler anzeigen
                 const errorAlert = document.createElement('div');
@@ -575,6 +449,8 @@ if(isset($_GET['search']) && !empty($_GET['search'])) {
                 
                 // Bearbeitungsformular mit Daten füllen
                 document.getElementById('edit_id').value = '<?php echo $editData['id']; ?>';
+                document.getElementById('edit_salutation').value = '<?php echo htmlspecialchars($editData['salutation']); ?>';
+                document.getElementById('edit_sex').value = '<?php echo htmlspecialchars($editData['sex']); ?>';
                 document.getElementById('edit_first_name').value = '<?php echo htmlspecialchars($editData['first_name']); ?>';
                 document.getElementById('edit_last_name').value = '<?php echo htmlspecialchars($editData['last_name']); ?>';
                 document.getElementById('edit_email').value = '<?php echo htmlspecialchars($editData['email']); ?>';
@@ -583,8 +459,16 @@ if(isset($_GET['search']) && !empty($_GET['search'])) {
                 document.getElementById('edit_birth_date').value = '<?php echo $editData['birth_date']; ?>';
                 document.getElementById('edit_membership_type').value = '<?php echo $editData['membership_type']; ?>';
                 document.getElementById('edit_status').value = '<?php echo $editData['status']; ?>';
-                document.getElementById('edit_address').value = '<?php echo htmlspecialchars($editData['address']); ?>';
-                
+                document.getElementById('edit_street').value = '<?php echo htmlspecialchars($editData['street']); ?>';
+                document.getElementById('edit_zip').value = '<?php echo htmlspecialchars($editData['zip']); ?>';
+                document.getElementById('edit_city').value = '<?php echo htmlspecialchars($editData['city']); ?>';
+                document.getElementById('edit_country').value = '<?php echo htmlspecialchars($editData['country']); ?>';
+                document.getElementById('edit_invoice_marker').value = '<?php echo $editData['invoice_marker']; ?>';
+                document.getElementById('edit_bank_name').value = '<?php echo htmlspecialchars($editData['bank_name']); ?>';
+                document.getElementById('edit_bank_bic').value = '<?php echo htmlspecialchars($editData['bank_bic']); ?>';
+                document.getElementById('edit_bank_iban').value = '<?php echo htmlspecialchars($editData['bank_iban']); ?>';
+                document.getElementById('edit_bank_holder').value = '<?php echo htmlspecialchars($editData['bank_holder']); ?>';
+
                 // Bearbeitungsmodal öffnen
                 new bootstrap.Modal(document.getElementById('editMemberModal')).show();
             <?php elseif($createError && $createData): ?>
@@ -606,8 +490,16 @@ if(isset($_GET['search']) && !empty($_GET['search'])) {
                 document.getElementById('birth_date').value = '<?php echo $createData['birth_date']; ?>';
                 document.getElementById('membership_type').value = '<?php echo $createData['membership_type']; ?>';
                 document.getElementById('status').value = '<?php echo $createData['status']; ?>';
-                document.getElementById('address').value = '<?php echo htmlspecialchars($createData['address']); ?>';
-                
+                document.getElementById('street').value = '<?php echo htmlspecialchars($createData['street']); ?>';
+                document.getElementById('zip').value = '<?php echo htmlspecialchars($createData['zip']); ?>';
+                document.getElementById('city').value = '<?php echo htmlspecialchars($createData['city']); ?>';
+                document.getElementById('country').value = '<?php echo htmlspecialchars($createData['country']); ?>';
+                document.getElementById('invoice_marker').value = '<?php echo $createData['invoice_marker']; ?>';
+                document.getElementById('bank_name').value = '<?php echo htmlspecialchars($createData['bank_name']); ?>';
+                document.getElementById('bank_bic').value = '<?php echo htmlspecialchars($createData['bank_bic']); ?>';
+                document.getElementById('bank_iban').value = '<?php echo htmlspecialchars($createData['bank_iban']); ?>';
+                document.getElementById('bank_holder').value = '<?php echo htmlspecialchars($createData['bank_holder']); ?>';
+
                 // Erstellungsmodal öffnen
                 new bootstrap.Modal(document.getElementById('addMemberModal')).show();
             <?php endif; ?>
@@ -622,6 +514,8 @@ if(isset($_GET['search']) && !empty($_GET['search'])) {
                     if (data.success) {
                         // Formularfelder mit Daten füllen
                         document.getElementById('edit_id').value = data.member.id;
+                        document.getElementById('edit_salutation').value = data.member.salutation || '';
+                        document.getElementById('edit_sex').value = data.member.sex || '';
                         document.getElementById('edit_first_name').value = data.member.first_name || '';
                         document.getElementById('edit_last_name').value = data.member.last_name || '';
                         document.getElementById('edit_email').value = data.member.email || '';
@@ -630,7 +524,15 @@ if(isset($_GET['search']) && !empty($_GET['search'])) {
                         document.getElementById('edit_birth_date').value = data.member.birth_date || '';
                         document.getElementById('edit_membership_type').value = data.member.membership_type || 'Vollmitglied';
                         document.getElementById('edit_status').value = data.member.status || 'Aktiv';
-                        document.getElementById('edit_address').value = data.member.address || '';
+                        document.getElementById('edit_street').value = data.member.street || '';
+                        document.getElementById('edit_zip').value = data.member.zip || '';
+                        document.getElementById('edit_city').value = data.member.city || '';
+                        document.getElementById('edit_country').value = data.member.country || '';
+                        document.getElementById('edit_invoice_marker').value = data.member.invoice_marker || '0';
+                        document.getElementById('edit_bank_name').value = data.member.bank_name || '';
+                        document.getElementById('edit_bank_bic').value = data.member.bank_bic || '';
+                        document.getElementById('edit_bank_iban').value = data.member.bank_iban || '';
+                        document.getElementById('edit_bank_holder').value = data.member.bank_holder || '';
                         
                         // Modal öffnen
                         new bootstrap.Modal(document.getElementById('editMemberModal')).show();
